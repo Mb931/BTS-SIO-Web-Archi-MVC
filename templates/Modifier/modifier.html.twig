@@ -1,0 +1,55 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Liste des étudiants{% endblock %}
+
+{% block content %}
+    <h1>Etudiant</h1>
+
+    <br>
+
+    <div>
+        <div>
+            <div>
+                <form method="post" action="" >
+                    <div data-validate="Il manque le prenom">
+                        <span>Prenom</span>
+                        <input type="text" name="prenom" placeholder="{{ etudiant.getPrenom }}" required>
+                        <span></span>
+                    </div>
+
+                    <div data-validate="Il manque le nom">
+                        <span>Nom</span>
+                        <input type="text" name="name" placeholder="{{ etudiant.getNom }}" required>
+                        <span></span>
+                    </div>
+
+                    <div data-validate = "Il manque l'Email">
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="{{ etudiant.getEmail }}" required>
+                        <span></span>
+                    </div>
+
+                    <div data-validate="Il manque le Pseudo">
+                        <span>Login</span>
+                        <input type="text" name="username" placeholder="{{ etudiant.getLogin }}" required>
+                        <span></span>
+                    </div>
+
+                    <div data-validate = "Il manque le mot de passe">
+                        <span>Mot de passe</span>
+                        <input type="password" name="pass" placeholder="{{ etudiant.getMotdePasse }}" required>
+                        <span></span>
+                    </div>
+                    <div>
+                        <div>
+                            <div>
+
+                            </div>
+
+                            <input type='submit' name='modifier'value="Modifier" class="login100-form-btn" >
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+{% endblock %}
